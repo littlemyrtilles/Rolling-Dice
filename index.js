@@ -1,10 +1,10 @@
 document.querySelector("button").addEventListener("click", function () {
     
-const randomNumber1 = Math.floor(Math.random()*6) + 1;
-const randomNumber2 = Math.floor(Math.random()*6) + 1;
- 
-document.querySelector(".img1").setAttribute("src", '/images/D${randomNumber1}.png');
-document.querySelector(".img2").setAttribute("src", '/images/D${randomNumber2}.png');
+var randomNumber1 = Math.ceil(Math.random()*6);
+var randomNumber2 = Math.ceil(Math.random()*6);
+
+document.querySelector(".img1").setAttribute("src", "images/D" + randomNumber1 + ".png");
+document.querySelector(".img2").setAttribute("src", "images/D" + randomNumber2 + ".png");
 
 if (randomNumber1 === randomNumber2) {
     document.querySelector("h1").innerHTML = "It's A Draw!";
